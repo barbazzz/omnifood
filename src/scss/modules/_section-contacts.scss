@@ -1,0 +1,66 @@
+//_section-contacts.scss
+
+/* ------------------------------------------ */
+/* Contacts section */
+/* ------------------------------------------ */
+
+.section-contacts {
+  @extend .clearfix;
+  background-image: url(../img/contact-map.png);
+  background-position: center left;
+  background-size: cover;
+}
+
+.form-box {
+  background-color: rgba(255, 255, 255, .9);
+  float: right;
+  padding: rem(50px) 0;
+  width: 50%;
+
+  @include respond-to(xx-small) {
+    width: 100%;
+    float: none;
+  };
+
+  form {
+    margin: 0 rem(30px);
+  }
+}
+
+
+
+input[type=text],
+input[type=email],
+textarea,
+select,
+{
+  width: 100%;
+  padding: rem(7px);
+  border-radius: rem(3px);
+  border: 1px solid $form-element-color--default;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type=text],
+input[type=email],
+input[type=submit],
+textarea,
+button,
+option,
+select {
+  outline: none;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+
+input[type=checkbox] {
+  margin: 10px 5px 10px 0;
+}
+
+.wrapper {
+  overflow: hidden;
+}

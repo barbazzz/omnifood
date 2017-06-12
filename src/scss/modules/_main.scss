@@ -1,0 +1,48 @@
+/* ------------------------------------------ */
+/* Modules */
+/* ------------------------------------------ */
+
+.wrapper {
+
+}
+
+// overwriting
+.section {
+  padding: 70px 0;
+
+  @include respond-to(small) {
+    padding: 50px 0;
+  }
+
+  @include respond-to(x-small) {
+    padding: 35px 0;
+  };
+
+  @include respond-to(xx-small) {
+    padding: 20px 0;
+  };
+}
+
+.row {
+  @include respond-to(medium) {
+    padding: 0 2%;
+  }
+
+  @include respond-to(x-small) {
+    padding: 0 4%;
+  }
+}
+
+.box {
+  padding: 1%;
+}
+
+.col {
+  @include respond-to(x-small) {
+    width: 100%;
+    margin: .5rem 0;
+  };
+}
+
+
+

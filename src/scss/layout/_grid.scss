@@ -1,0 +1,44 @@
+
+$margin: 1.6%;
+
+@for $cols from 2 through 12 {
+	$span: $cols;
+	@while $span > 0 {
+		@if ($span == $cols) {
+			.span_#{$span}_of_#{$cols} { width: 100%; }
+		} @else {
+			.span_#{$span}_of_#{$cols} { width: decimal-round( (((100 - ($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 6, 'floor'); }
+		}
+		$span: $span - 1;
+	}
+}
+
+.row {
+  max-width: $row-width;
+  margin: auto;
+}
+
+/* There is more style for 'section' in _main.scss file */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% $margin;
+}
+.col:first-child {
+	margin-left: 0;
+}
+
+/*  GROUPING  */
+/* something like 'clearfix' */
+.group:after {
+	content:"";
+	display:table;
+	clear:both;
+}

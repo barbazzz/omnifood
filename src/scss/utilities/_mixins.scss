@@ -1,0 +1,34 @@
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// .wrap {
+//   ...
+//   @extend .clearfix;
+// }
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// .wrap {
+//   ...
+//   @extend %clearfix;
+// }

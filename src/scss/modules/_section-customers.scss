@@ -1,0 +1,69 @@
+//_section-customers.scss
+
+/* ------------------------------------------ */
+/* Custromers section */
+/* ------------------------------------------ */
+
+.section-customers {
+  background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+                    url(../img/back-customers-3.jpg);
+  background-color: $medium-black;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: $white;
+
+  h2 {
+    // color: $white;
+  }
+
+  .box {
+    padding: 0;
+  }
+  
+}
+
+.quote {
+  margin: 25px 0 0 0;
+  display: block;
+  font-style: italic;
+  padding: 2%;
+  position: relative;
+  line-height: 1.45;
+
+  @include respond-to(xx-small) {
+    margin-bottom: .5rem;
+  };
+
+  &:before {
+    content: '\201C';
+    display: block;
+    font-size: 5em;
+    left: -5px;
+    position: absolute;
+    top: 0px;
+    line-height: 20px;
+  }
+
+  &__text {
+    font-size: 1em;
+    margin: 0 0 20px 0;
+    
+    @include respond-to(xx-small) {
+      margin-bottom: .5em;
+    };
+  }
+
+  &__cite {
+    font-size: 0.9em;
+
+    img {
+      border-radius: 50%;
+      display: inline-block;
+      height: 3em;
+      margin-right: 14px;
+      vertical-align: middle;
+      width: 3em;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.icon-big {
+  color: $color--primary;
+  display: block;
+  font-size: rem(60px);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.icon-small {
+  color: $color--primary;
+  display: inline-block;
+  font-size: rem(24px);
+  margin-right: rem(5px);
+  width: rem(30px);
+  text-align: center;
+  vertical-align: middle;
+  
+  @include respond-to(x-small) {
+    width: 1rem;
+    margin-right: 2px;
+  };
+}
+

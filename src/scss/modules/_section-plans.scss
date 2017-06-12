@@ -1,0 +1,85 @@
+//_section-plans.scss
+
+/* ------------------------------------------ */
+/* Plans section */
+/* ------------------------------------------ */
+
+.section-plans {
+  background-color: $light-grey;
+}
+
+
+.subs-plan {
+  width: 90%;
+  margin-left: 5%;
+  background: $white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 2px #e3e3e3;
+
+  @include respond-to(small) {
+    width: 100%;
+    margin-left: 0;
+  };
+
+  > div {
+    padding: 1rem;
+
+    + div {
+      border-top: 1px solid #e8e8e8;
+    }
+  }
+
+  &__gist {
+    background: $slightly-grey;
+
+    h3 {
+      margin: 0;
+    }
+
+    .plan-price {
+      color: $color--primary;
+      font-size: .9rem;
+      margin-bottom: 10px;
+
+      span {
+        font-size: rem(60px);
+        font-weight: 100;
+
+        @include respond-to(small) {
+          font-size: rem(40px);
+        };
+      }
+    }
+
+    .plan-meal {
+      font-size: .8rem;
+    }
+  }
+
+  &__info-list {
+
+    ul {
+      list-style: none;
+    }
+
+    i {
+      color: $color--primary;
+    }
+  }
+
+  &__button {
+    text-align: center;
+
+    // .btn--default {
+    //   color: $color--primary;
+    //   border-color: $color--primary;
+
+    //   &:hover {
+    //     background-color: $color--primary;
+    //     color: $white;
+    //   }
+    // }
+  }
+}
+

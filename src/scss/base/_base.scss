@@ -1,0 +1,76 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $white;
+  color: $black;
+  // we think, that browser font is 16px
+  // so our 1.25em will be 20px as we want
+  font-size: 20px;
+  font-weight: 300;
+  font-family: $font-family--primary;
+  line-height: $base__line;
+  // text-rendering: optimizeLegibility;
+  text-rendering: auto;
+
+  @include respond-to(small) {
+    font-size: 18px;
+  };
+
+  @include respond-to(x-small) {
+    font-size: 16px;
+  };
+}
+
+body {
+  // font-size: rem(20px);
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+/* -------- HEADINGS ---------- */ 
+
+h1, h2, h3 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  text-align: center;
+  word-spacing: 2px;
+
+  &:after {
+    background-color: $color--primary;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 30px auto 0;
+    width: 100px;
+  }
+}
+
+h3 {
+  font-size: 1.1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: $font-family--primary;
+}

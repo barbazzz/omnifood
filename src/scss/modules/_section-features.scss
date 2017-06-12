@@ -1,0 +1,34 @@
+// _section-features.scss
+
+/* ------------------------------------------ */
+/* Features section */
+/* ------------------------------------------ */
+
+.section-features {
+
+}
+
+.long-copy {
+  width: 70%;
+  margin: 0 auto 40px;
+  line-height: 1.45;
+
+  @include respond-to(small) {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.features {
+  
+  &--item {
+
+    p {
+      line-height: 1.45;
+      font-size: .9rem;
+    }
+    
+  }
+}
+

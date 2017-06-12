@@ -1,0 +1,38 @@
+// _section-meals.scss
+
+/* ------------------------------------------ */
+/* Meals section */
+/* ------------------------------------------ */
+
+.meals-showcase {
+  @extend .clearfix;
+
+  list-style: none;
+  width: 100%;
+
+  li {
+    display: block;
+    float: left;
+    width: 25%;
+  }
+}
+
+.meal-photo {
+  background-color: $black;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+
+  &:hover img {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all .5s;
+  }
+}

@@ -1,0 +1,52 @@
+// a b c d e f g
+// h i j k l m n o p
+// q r s t u v w 
+// xyz
+.btn {
+  cursor: pointer;
+  border-radius: 4em;
+  border: 1px solid $white;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 10px 30px;
+  text-decoration: none;
+  transition: .2s all;
+
+  &:not(:first-of-type) {
+    margin-left: 14px;
+  }
+
+  &--full {
+    color: $white;
+    background-color: $color--primary;
+    border-color: $color--primary;
+
+    &:hover,
+    &:active {
+      background-color: darken($color--primary, 10%);
+      border-color: darken($color--primary, 10%);
+    }
+  }
+
+  &--ghost {
+    border-color: $color--primary;
+    color: $color--primary;
+
+    &:hover,
+    &:active {
+      background-color: $color--primary;
+      color: $white;
+    }
+  }
+
+  &--default {
+
+    &:hover,
+    &:active {
+      border-color: $color--primary;
+      color: $color--primary;
+    }
+  }
+}
+

@@ -1,0 +1,96 @@
+/* ------------------------------------------ */
+/* Main footer */
+/* ------------------------------------------ */
+.main-footer {
+  @extend .section;
+  background-color: $medium-black;
+  color: #888;
+  padding: 50px 0;
+  font-size: .8rem;
+
+  a {
+    color: #888;
+    &:hover {
+      color: #ddd;
+    }
+  }
+}
+
+.footer-text {
+  text-align: center;
+  margin: .5rem 0;
+      
+  a {
+    border-bottom: 1px solid #888;
+    display: inline-block;
+    transition: all .3s;
+
+    &:hover {
+      border-bottom-color: transparent;
+    }
+  }
+}
+
+.footer-nav,
+.footer-social {
+  list-style: none;
+
+  li {
+    display: inline-block;
+    margin-right: .5rem;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+
+.footer-nav {
+  float: left;
+
+  a {
+    transition: all .3s;
+  }
+}
+
+.footer-social {
+  float: right;
+  font-size: 1.5rem;
+
+  i {
+    transition: all .3s;
+
+    &:before {
+      text-align: center;
+      width: 1em;
+    }
+  }
+}
+
+.ion-social-facebook {
+  &:hover {
+    color: $facebook-color;
+  }
+}
+
+.ion-social-twitter {
+  &:hover {
+    color: $twiter-color;
+  }
+}
+
+.ion-social-googleplus {
+  &:hover {
+    color: $googleplus-color;
+  }
+}
+
+.ion-social-instagram {
+  &:hover {
+    color: $instagram-color;
+  }
+}
+
+
+

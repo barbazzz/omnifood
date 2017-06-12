@@ -1,0 +1,94 @@
+//_section-how.scss
+
+/* ------------------------------------------ */
+/* How It Works section */
+/* ------------------------------------------ */
+
+.section-how {
+  background-color: $light-grey;
+}
+
+
+.links-block {
+  img {
+    height: rem(50px);
+    width: auto;
+  }
+  a:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+
+.steps-box {
+  padding-top: 20px;
+
+  &:first-child {
+    text-align: right;
+    padding-right: 3%;
+
+    @include respond-to(x-small) {
+      text-align: center;
+      padding-right: 0;
+    };
+  }
+
+  &:last-child {
+    padding-top: 40px;
+    padding-left: 3%;
+  }
+}
+
+.app-screen {
+  width: 40%;
+
+  @include respond-to(small) {
+    width: 45%;
+  };
+
+  @include respond-to(x-small) {
+    width: 40%;
+  };
+
+}
+
+.custom-list {
+  list-style: none;
+  
+  &--item {
+    @extend .clearfix;
+
+    margin-bottom: 40px;
+
+    @include respond-to(small) {
+      margin-bottom: 20px;
+    };
+
+    &:last-of-type {
+      margin-bottom: 70px;
+
+      @include respond-to(small) {
+        margin-bottom: 35px;
+      };
+
+    }
+  }
+}
+
+.item-number {
+  display: inline-block;
+  width: 2.2em;
+  height: 2.2em;
+  border: 1px solid $color--primary;
+  border-radius: 50%;
+  float: left;
+  color: $color--primary;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: rem(7px);
+  margin-right: rem(15px);
+}
+
+.item-text {
+  // looks fine without styling, but...
+}
