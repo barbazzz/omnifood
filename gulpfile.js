@@ -67,7 +67,7 @@ gulp.task('scss:build', () => {
       browsers: [
         '>1%',
         'last 2 version',
-        'ie>=9'
+        'ie>=9',
       ],
       ignore: ['rem'],
       ignoreFiles: [],

@@ -43,3 +43,7 @@ _trash
 ehthumbs.db
 Thumbs.db
 
+# Sublime Text Editor #
+#######################
+*.sublime-*
+

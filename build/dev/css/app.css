@@ -419,7 +419,8 @@ h2 {
   letter-spacing: 1px;
   margin-bottom: 30px;
   text-align: center;
-  word-spacing: 2px; }
+  word-spacing: 2px;
+  font-size: 1.5rem; }
   h2:after {
     background-color: #1abc9c;
     content: '';
@@ -5484,6 +5485,14 @@ textarea {
     @media (max-width: 1023px) {
       .custom-list--item {
         margin-bottom: 20px; } }
+    @media (max-width: 767px) {
+      .custom-list--item {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto; } }
+    @media (max-width: 480px) {
+      .custom-list--item {
+        width: 100%; } }
     .custom-list--item:last-of-type {
       margin-bottom: 70px; }
       @media (max-width: 1023px) {
@@ -5555,16 +5564,22 @@ textarea {
   padding: 2%;
   position: relative;
   line-height: 1.45; }
+  @media (max-width: 767px) {
+    .quote {
+      margin-left: auto;
+      margin-right: auto;
+      width: 85%; } }
   @media (max-width: 480px) {
     .quote {
-      margin-bottom: .5rem; } }
+      margin-bottom: .5rem;
+      width: 100%; } }
   .quote:before {
     content: '\201C';
     display: block;
     font-size: 5em;
     left: -5px;
     position: absolute;
-    top: 0px;
+    top: 10px;
     line-height: 20px; }
   .quote__text {
     font-size: 1em;
@@ -5574,6 +5589,9 @@ textarea {
         margin-bottom: .5em; } }
   .quote__cite {
     font-size: 0.9em; }
+    @media (max-width: 480px) {
+      .quote__cite {
+        text-align: center; } }
     .quote__cite img {
       border-radius: 50%;
       display: inline-block;
@@ -5590,7 +5608,8 @@ textarea {
 
 .subs-plan {
   width: 90%;
-  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
   background: #fff;
   border-radius: 4px;
   overflow: hidden;
@@ -5639,7 +5658,7 @@ textarea {
   float: right;
   padding: 2.5rem 0;
   width: 50%; }
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     .form-box {
       width: 100%;
       float: none; } }
@@ -5672,12 +5691,12 @@ select {
 input[type=checkbox] {
   margin: 10px 5px 10px 0; }
 
-.wrapper {
-  overflow: hidden; }
-
 /* ------------------------------------------ */
 /* Modules */
 /* ------------------------------------------ */
+.wrapper {
+  overflow: hidden; }
+
 .section, .main-footer {
   padding: 70px 0; }
   @media (max-width: 1023px) {
@@ -5704,7 +5723,7 @@ input[type=checkbox] {
 @media (max-width: 767px) {
   .col {
     width: 100%;
-    margin: .5rem 0; } }
+    margin: 0 0 .5rem 0; } }
 
 /* ------------------------------------------ */
 /* Main footer */
