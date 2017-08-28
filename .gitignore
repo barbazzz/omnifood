@@ -1,5 +1,6 @@
-node_modules
-_trash
+node_modules/
+_trash/
+build/dev/
 *.jpg
 *.png
 *.jpeg
