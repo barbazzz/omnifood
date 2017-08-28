@@ -4,7 +4,7 @@ $browser-context: 20px; // Default
   // If the key exists in the map
   @if map-has-key($breakpoints, $name) {
     // Prints a media query based on the value
-    @media #{inspect(map-get($breakpoints, $name))} {
+    @media only screen and #{inspect(map-get($breakpoints, $name))} {
       @content;
     }
   }
