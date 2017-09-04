@@ -1,8 +1,47 @@
-(function(window){
+(function(window, $){
   'use strict';
-  var 
-    w = window
-   ,d = w.document;
+
+  new Waypoint({
+    element: $('.js-fixed-nav-start'),
+
+    handler: function(direction) {
+      if (direction === 'down') {
+        $('.header-nav').addClass('header-nav--fixed');
+      } else {
+        $('.header-nav').removeClass('header-nav--fixed');
+      }
+    },
+
+    offset: '59px'
+  });
+
+  function handler(direction) {
+    if (direction === 'down') {
+      $('.header-nav').addClass('header-nav--fixed');
+    } else {
+      $('.header-nav').removeClass('header-nav--fixed');
+    }
+  }
+
+  $(function() {
+    var duration = 1000;
+
+    $('a[data-scroll-to]').click(function(e) {
+      e.preventDefault();
+
+      $('body').animate({
+        scrollTop: $( '.' + $(this).attr('data-scroll-to') ).offset().top
+      }, duration);
+
+    });
+  });
+
+
+
+
+
+  var w = window,
+    d = w.document;
 
   function noLinks(e) {
     var tag = e.target;
@@ -12,4 +51,5 @@
   }
 
   d.addEventListener('click', noLinks, false);
-}(window));
+
+}(window, $));

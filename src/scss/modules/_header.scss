@@ -54,18 +54,61 @@
   
   font-size: .9rem;
   padding-top: 1rem;
+  width: 100%;
 
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0;
+    color: black;
+    font-size: rem(15px);
+    box-shadow: 0 1px 2px  rgba(0, 0, 0, .3);
+    background-color: rgba(255, 255, 255, .98);
+    z-index: 100;
+    
+    .header-nav__logo {
+      width: rem(50px);
+      margin: 5px 0;
 
-  img {
+      .logo-white {
+        display: none;
+      }
+      .logo-black {
+        display: block;
+      }
+    }
+
+    .hd-list {
+      padding-top: rem(22px);
+    }
+  
+
+  }
+  
+  &__logo {
     display: block;
+    width: 100px;
     float: left;
-    height: 100px;
+
+    .logo-white {
+      display: block;
+    }
+
+    .logo-black {
+      display: none;
+    }
 
     @include respond-to(small) {
       display: block;
       float: none;
       margin: 0 auto;
     }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 }
 
@@ -89,10 +132,21 @@
     font-size: 1rem;
     display: inline-block;
     text-transform: uppercase;
+    .header-nav--fixed & {
+      font-size: rem(15px);
+      a {
+        color: $black;
+      }
+    }
     a {
-      transition: .3s all;
+      transition: .3s border-bottom;
       padding: 8px 0;
       border-bottom: 2px solid transparent;
+        
+      &.active {
+        border-bottom-color: $color--primary;
+      }
+      
       &:hover {
         border-bottom-color: $color--primary;
       }

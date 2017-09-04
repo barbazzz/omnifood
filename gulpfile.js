@@ -99,11 +99,12 @@ gulp.task('html:build', () => {
 });
 
 gulp.task('js:build', () => {
-  console.log('gulp');
+  gulp.src(['src/js/lib/*.js'])
+    .pipe(gulp.dest('./build/dev/js/lib'));
   gulp.src(['src/js/*.js'])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('./build/dev/js'))
-    .pipe(reload({stream: true}))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('images', () => {

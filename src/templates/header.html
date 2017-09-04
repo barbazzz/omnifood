@@ -1,17 +1,18 @@
 <header class="main-header">
 
-  <nav class="header-nav">
+  <nav class="header-nav js-navigation">
 
     <div class="row group">
 
-      <a href="/">
-        <img src="img/logo-white.png" alt="omnifood logo">
+      <a href="/" class="header-nav__logo">
+        <img class="logo-white" src="img/logo-white.png" alt="omnifood logo">
+        <img class="logo-black" src="img/logo.png" alt="omnifood logo">
       </a>
       <ul class="hd-list">
-        <li><a href="#">Food delivery</a></li>
-        <li><a href="#">How it works</a></li>
-        <li><a href="#">Our cities</a></li>
-        <li><a href="#">Sign up</a></li>
+        <li><a href="#" data-scroll-to="js-section-feature">Food delivery</a></li>
+        <li><a href="#" data-scroll-to="js-section-how">How it works</a></li>
+        <li><a href="#" data-scroll-to="js-section-cities">Our cities</a></li>
+        <li><a href="#" data-scroll-to="js-section-plans">Sign up</a></li>
       </ul>
 
     </div>
@@ -23,8 +24,8 @@
       <span>Goodbye junk food.</span>
       <span>Hello super healthy meals.</span>
     </p>
-    <a href="#" class="btn btn--default">I’m hungry</a>
-    <a href="#" class="btn btn--default">Show me more</a>
+    <a data-scroll-to="js-section-feature" href="#" class="btn btn--default">I’m hungry</a>
+    <a data-scroll-to="js-section-plans" href="#" class="btn btn--default">Show me more</a>
   </div>
 
 </header>

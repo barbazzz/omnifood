@@ -14,18 +14,19 @@
     <div class="wrapper">
       <header class="main-header">
       
-        <nav class="header-nav">
+        <nav class="header-nav js-navigation">
       
           <div class="row group">
       
-            <a href="/">
-              <img src="img/logo-white.png" alt="omnifood logo">
+            <a href="/" class="header-nav__logo">
+              <img class="logo-white" src="img/logo-white.png" alt="omnifood logo">
+              <img class="logo-black" src="img/logo.png" alt="omnifood logo">
             </a>
             <ul class="hd-list">
-              <li><a href="#">Food delivery</a></li>
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Our cities</a></li>
-              <li><a href="#">Sign up</a></li>
+              <li><a href="#" data-scroll-to="js-section-feature">Food delivery</a></li>
+              <li><a href="#" data-scroll-to="js-section-how">How it works</a></li>
+              <li><a href="#" data-scroll-to="js-section-cities">Our cities</a></li>
+              <li><a href="#" data-scroll-to="js-section-plans">Sign up</a></li>
             </ul>
       
           </div>
@@ -37,13 +38,13 @@
             <span>Goodbye junk food.</span>
             <span>Hello super healthy meals.</span>
           </p>
-          <a href="#" class="btn btn--default">I’m hungry</a>
-          <a href="#" class="btn btn--default">Show me more</a>
+          <a data-scroll-to="js-section-feature" href="#" class="btn btn--default">I’m hungry</a>
+          <a data-scroll-to="js-section-plans" href="#" class="btn btn--default">Show me more</a>
         </div>
       
       </header>
       
-      <section class="section section-features">
+      <section class="section section-features js-fixed-nav-start js-section-feature">
 
         <div class="group row">
           <h2>Get food fast &mdash; not fast food</h2>
@@ -146,7 +147,7 @@
 
 
 
-      <section class="section section-how">
+      <section class="section section-how js-section-how">
 
         <div class="row">
           <h2>How it works - Simple as 1, 2, 3</h2>
@@ -185,7 +186,7 @@
 
 
 
-      <section class="section section-cities">
+      <section class="section section-cities js-section-cities">
 
         <div class="row">
           <h2>We're currently in these cities</h2>
@@ -332,7 +333,7 @@
       </section>
 
 
-      <section class="section section-plans">
+      <section class="section section-plans js-section-plans">
 
         <div class="row">
           <h2>Start eating healthy today</h2>
@@ -436,7 +437,7 @@
       </section>
 
 
-      <section class="section-contacts">
+      <section class="section-contacts js-section-contacts">
 
           <div class="contacts-map col span_1_of_2">
             <!-- <img src="img/contact-map.png"> -->
@@ -545,7 +546,10 @@
       </footer>
     </div>
     <!-- Vendor Libraries -->
-    <script type="text/javascript" src=""></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src=""></script> -->
+    <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.waypoint.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

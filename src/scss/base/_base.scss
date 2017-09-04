@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html {
+html,
+body {
   background-color: $white;
   color: $black;
   // we think, that browser font is 16px
@@ -13,7 +14,7 @@ html {
   font-weight: 300;
   font-family: $font-family--primary;
   line-height: $base__line;
-  // text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
   text-rendering: auto;
 
   @include respond-to(small) {
