@@ -82,7 +82,6 @@
     .hd-list {
       padding-top: rem(22px);
     }
-  
 
   }
   
@@ -100,9 +99,6 @@
     }
 
     @include respond-to(small) {
-      display: block;
-      float: none;
-      margin: 0 auto;
     }
   }
 
@@ -118,31 +114,42 @@
   padding-top: 37px;
   font-size: 0;
 
-  @include respond-to(small) {
-    float: none;
-    padding-top: 1rem;
-    text-align: center;
-  };
+  .header-nav & {
+    @include respond-to(small) {
+      float: left;
+      padding-top: .5rem;
+    };
+  }
 
-  @include respond-to(x-small) {
+  @include respond-to(small) {
     display: none;
-  };
+    padding-left: 2rem;
+  }
 
   li {
+
     font-size: 1rem;
     display: inline-block;
     text-transform: uppercase;
+
+    @include respond-to(small) {
+      display: block;
+    }
+
     .header-nav--fixed & {
       font-size: rem(15px);
+
       a {
         color: $black;
       }
     }
+
     a {
       transition: .3s border-bottom;
       padding: 8px 0;
       border-bottom: 2px solid transparent;
-        
+      display: inline-block; 
+
       &.active {
         border-bottom-color: $color--primary;
       }
@@ -150,9 +157,34 @@
       &:hover {
         border-bottom-color: $color--primary;
       }
+
+      @include respond-to(small) {
+        border: 0;
+      }
+
     }
     + li {
       margin-left: rem(40px);
+
+      @include respond-to(small) {
+        margin-left: 0;
+      };
+
     }
   }
+}
+
+.header-nav__btn {
+  display: none;
+
+  i {
+    cursor: pointer;
+  }
+
+  @include respond-to(small) {
+    display: block;
+    float: right;
+    font-size: 2em;
+    margin-top: 0.4em; 
+  };
 }

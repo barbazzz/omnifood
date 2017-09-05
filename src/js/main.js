@@ -61,13 +61,27 @@
     $('a[data-scroll-to]').click(function(e) {
       e.preventDefault();
 
+      var offset = $( '.' + $(this).attr('data-scroll-to') ).offset().top - 50;
+
       $('body').animate({
-        scrollTop: $( '.' + $(this).attr('data-scroll-to') ).offset().top
+        scrollTop: offset
       }, duration);
 
     });
   });
 
-  
+  $('.header-nav__btn').on('click touch', function(e) {
+    var $icon = $('.header-nav__btn i'),
+        burger = 'ion-navicon-round',
+        cross = 'ion-close-round';
+
+    $('.hd-list').slideToggle(200);
+
+    if ($icon.hasClass(burger)) {
+      $icon.removeClass(burger).addClass(cross);
+    } else {
+      $icon.removeClass(cross).addClass(burger);
+    }
+  });
 
 }(window, $));
