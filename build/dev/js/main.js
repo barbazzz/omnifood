@@ -1,6 +1,19 @@
 (function(window, $){
   'use strict';
 
+  var w = window,
+    d = w.document;
+
+  function noLinks(e) {
+    var tag = e.target;
+    if (tag.tagName.toUpperCase() === 'A' && tag.getAttribute('href').trim() === '#') {
+      e.preventDefault();
+    }
+  }
+
+  d.addEventListener('click', noLinks, false);
+
+  // Fixed navigation for desctop version
   new Waypoint({
     element: $('.js-fixed-nav-start'),
 
@@ -15,13 +28,32 @@
     offset: '59px'
   });
 
-  function handler(direction) {
-    if (direction === 'down') {
-      $('.header-nav').addClass('header-nav--fixed');
-    } else {
-      $('.header-nav').removeClass('header-nav--fixed');
-    }
-  }
+  // Animation on scroll effect with Animate.css library and Waypoint.js
+  $('[data-anim-on-scroll]').each(function() {
+    new Waypoint({
+      element: $(this),
+
+      handler: function(direction) {
+        var $element = $(this.element);
+        $element.addClass('animated ' + $element.attr('data-anim-on-scroll'));
+        this.destroy();
+      },
+
+      offset: '50%'
+    });
+  });
+
+  new Waypoint({
+    element: $('.features'),
+
+    handler: function(direction) {
+      var $element = $(this.element);
+      $element.addClass('animated ' + $element.attr('data-anim-on-scroll'));
+      this.destroy();
+    },
+
+    offset: '50%'
+  });
 
   $(function() {
     var duration = 1000;
@@ -36,20 +68,6 @@
     });
   });
 
-
-
-
-
-  var w = window,
-    d = w.document;
-
-  function noLinks(e) {
-    var tag = e.target;
-    if (tag.tagName.toUpperCase() === 'A' && tag.getAttribute('href').trim() === '#') {
-      e.preventDefault();
-    }
-  }
-
-  d.addEventListener('click', noLinks, false);
+  
 
 }(window, $));
