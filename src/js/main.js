@@ -1,4 +1,4 @@
-/* global Waypoint */
+/* global Waypoint, global GMaps */
 (function (window, $) {
   var w = window;
   var d = w.document;
@@ -80,6 +80,22 @@
       $icon.removeClass(burger).addClass(cross);
     } else {
       $icon.removeClass(cross).addClass(burger);
+    }
+  });
+
+  $('.contacts-map').css('height', $('.form-box').innerHeight() || 500);
+
+  new GMaps({
+    div: '.contacts-map',
+    lat: -12,
+    lng: -77,
+    zoom: 11
+  }).addMarker({
+    lat: -12.043333,
+    lng: -77.028333,
+    title: 'Lima',
+    infoWindow: {
+      content: '<p>Lima is cool, yeah</p>'
     }
   });
 }(window, $));

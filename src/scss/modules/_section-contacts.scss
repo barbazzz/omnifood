@@ -4,12 +4,22 @@
 /* Contacts section */
 /* ------------------------------------------ */
 
+
+
 .section-contacts {
   @extend .clearfix;
-  background-image: url(../img/contact-map.png);
-  background-position: center left;
-  background-size: cover;
+  // background-image: url(../img/contact-map.png);
+  // background-position: center left;
+  // background-size: cover;
+  background-color: #fff;
+}
 
+.contacts-map {
+  width: 50%;
+  float: left;
+  height: 500px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .form-box {
