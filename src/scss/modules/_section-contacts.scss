@@ -4,8 +4,6 @@
 /* Contacts section */
 /* ------------------------------------------ */
 
-
-
 .section-contacts {
   @extend .clearfix;
   // background-image: url(../img/contact-map.png);
@@ -20,6 +18,11 @@
   height: 500px;
   margin-top: 0;
   margin-bottom: 0;
+
+  @include respond-to(x-small) {
+    width: 100%;
+    float: none;
+  };
 }
 
 .form-box {
@@ -33,42 +36,44 @@
     float: none;
   };
 
+  h2 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   form {
     margin: 0 rem(30px);
   }
 }
 
-
-
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 textarea,
-select,
-{
-  width: 100%;
-  padding: rem(7px);
-  border-radius: rem(3px);
+select {
   border: 1px solid $form-element-color--default;
+  border-radius: rem(3px);
+  padding: rem(7px);
+  width: 100%;
 }
 
 textarea {
   resize: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=submit],
+input[type='email'],
+input[type='submit'],
+input[type='text'],
 textarea,
 button,
 option,
 select {
-  outline: none;
-  font-weight: 300;
   font-size: 1rem;
+  font-weight: 300;
+  outline: none;
 }
 
 
-input[type=checkbox] {
+input[type='checkbox'] {
   margin: 10px 5px 10px 0;
 }
 

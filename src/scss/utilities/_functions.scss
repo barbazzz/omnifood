@@ -21,10 +21,6 @@ $browser-context: 20px; // Default
   @return #{$pixels/$context}em;
 }
 
-// @function rem($pixels, $context: $browser-context) {
-//   @return #{$pixels/$context}rem;
-// }
-
 @function rem($pixels, $context: $browser-context) {
   @return #{$pixels/$context}rem;
 }
